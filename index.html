@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>APIS de JS</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col-12 text-center py-3 bg-dark text-success">
+                <h1>APIS de JS</h1>
+                <h6>Poner la pagina en ingles</h6>
+            </div>
+        </div>
+      <div class="row row-cols-md-2 row-cols-1 g-3 p-2">
+        <div class="col-md-6">
+          <div class="p-1 border border-dark card">
+            <div class="card-body">
+              <h4 class="card-title">Date</h4>
+            </div>
+            <div class="card-body row">
+              <p class="card-text col-12"><strong>Metodos:</strong></p>
+              <p class="card-text col-4">1.getDate()</p>
+              <p class="card-text col-4">2.getYear()</p>
+              <p class="card-text col-4">3.getMonth()</p>
+              <p class="card-text col-4">4.getDay()</p>
+              <p class="card-text col-4">5.getHours()</p>
+              <p class="card-text col-4">6.getMinutes()</p>
+              <p class="card-text col-4">7.getSeconds()</p>
+            </div>
+            <div class="card-body row">
+              <p class="card-text col-12"><strong>Resultado:</strong></p>
+                <div class="form-group card-text col-md-4">
+                    <select class="form-control" name="" id="opcion_date">
+                        <option>Seleccionar</option>
+                        <option value="1">1 getDate()</option>
+                        <option value="2">2 getYear()</option>
+                        <option value="3">3 getMonth()</option>
+                        <option value="4">4 getDay()</option>
+                        <option value="5">5 getHours()</option>
+                        <option value="6">6 getMinutes()</option>
+                        <option value="7">7 getSeconds()</option>
+                    </select>
+                </div>
+              <p class="card-text col-md-8" id="api_date"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-1 border border-dark card">
+            <div class="card-body">
+              <h4 class="card-title">Reloj</h4>
+            </div>
+            <div class="d-flex justify-content-center display-1 bg-dark px-5 py-3 rounded col-12 mx-auto">
+              <div class="text-success" id="hora">17</div>
+              <div class="mx-1 text-light">:</div>
+              <div class="text-info" id="minuto">06</div>
+              <div class="mx-1 text-light">:</div>
+              <div class="text-warning" id="segundo">10</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">LocalStorage y SessionStorage</h4>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Metodos:</strong></p>
+                <p class="card-text col-4">1.setItem()</p>
+                <p class="card-text col-4">2.getItem()</p>
+                <p class="card-text col-4">3.removeItem()</p>
+                <p class="card-text col-4">4.clear()</p>
+              </div>
+              <div class="card-body row g-2">
+                <p class="card-text col-12"><strong>Resultado:</strong></p>
+                <div class="form-group card-text col-md-4">
+                    <select class="form-control" name="" id="opcion_storage">
+                        <option>Seleccionar</option>
+                        <option value="1">1 local setItem()</option>
+                        <option value="2">2 local getItem()</option>
+                        <option value="3">3 local removeItem()</option>
+                        <option value="4">4 local clear()</option>
+                        <option value="5">5 session setItem()</option>
+                        <option value="6">6 session getItem()</option>
+                        <option value="7">7 session removeItem()</option>
+                        <option value="8">8 session clear()</option>
+                    </select>
+                </div>
+                <div class="form-group card-text col-md-4">
+                  <input type="text" class="form-control" name="" id="key_storage" placeholder="Key">
+                </div>
+                <div class="form-group card-text col-md-4">
+                  <input type="text" class="form-control" name="" id="texto_storage" placeholder="Texto del key">
+                </div>
+                <div class="form-group card-text col-md-4">
+                    <button type="button" name="" id="ejecutar_storage" class="btn btn-primary">Ejecutar</button>
+                </div>
+                <p class="card-text col-md-8" id="api_storage"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">Idioma</h4>
+              </div>
+              <div class="bg-dark rounded text-light p-4 row col-12 mx-auto">
+                <div class="h3 col-12" id="idioma">¿En que idioma quieres visualizar la pagina?</div>
+                <div class="col-6">
+                    <button type="button" name="" id="es" class="btn btn-primary btn-sm btn-block">Español</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" name="" id="en" class="btn btn-primary btn-sm btn-block">Ingles</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">Drag & Drop</h4>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Eventos del Objeto:</strong></p>
+                <p class="card-text col-4">1.dragstart</p>
+                <p class="card-text col-4">2.drag</p>
+                <p class="card-text col-4">3.dragend</p>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Eventos de zona:</strong></p>
+                <p class="card-text col-4">1.dragenter</p>
+                <p class="card-text col-4">2.dragover</p>
+                <p class="card-text col-4">3.drop</p>
+                <p class="card-text col-4">4.dragleave</p>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Propiedad dataTransfer:</strong></p>
+                <p class="card-text col-4">1.getData()</p>
+                <p class="card-text col-4">2.setData()</p>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Resultado:</strong></p>
+              </div>
+              <div class="bg-dark rounded text-light p-3 row col-12 mx-auto">
+                <div class="col-3 my-2 bg-warning rounded-circle circulo d-flex" draggable="true" id="circulo">
+                    <div class="m-auto">Arrastrame</div>
+                </div>
+                <div class="col-12 my-2 bg-info rectangulo d-flex p-2" id="rectangulo"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">Texturizador</h4>
+              </div>
+              <div class="bg-dark rounded text-light p-4 row col-12 mx-auto d-flex justify-content-between">
+                <div class="h3 col-3 border textura textura_01" id="textura_01" draggable="true"></div>
+                <div class="h3 col-3 border textura textura_02" id="textura_02" draggable="true"></div>
+                <div class="h3 col-3 border textura textura_03" id="textura_03" draggable="true"></div>
+                <div class="h3 col-12 border zona_textura mt-2" id="zona_textura"></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

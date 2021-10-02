@@ -1,0 +1,26 @@
+.circulo{
+    height: 18vh;
+    width: 18vh;
+    font-size: .7em;
+}
+.rectangulo{
+    min-height: 18vh;
+    font-size: .7em;
+}
+
+.textura{
+    height: 18vh;
+    width: 18vh;
+}
+.zona_textura{
+    min-height: 30vh;
+}
+.textura_01{
+    background-image: url('img/textura_01.jpg');
+}
+.textura_02{
+    background-image: url('img/textura_02.jpg');
+}
+.textura_03{
+    background-image: url('img/textura_03.jpg');
+}
