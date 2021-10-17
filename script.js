@@ -128,3 +128,24 @@ zona_textura.addEventListener("drop",(e)=>{
     let url_textura = e.dataTransfer.getData("id")
     zona_textura.style.background = `url(img/${url_textura}.jpg)`
 })
+// *********************************************************************************************
+const longitud = document.getElementById("longitud");
+const latitud = document.getElementById("latitud");
+const velocidad = document.getElementById("velocidad");
+
+const geolocalizacion = navigator.geolocation;
+const position = (pos)=>{ 
+    let coordenadas = pos.coords
+    console.log(
+        pos,
+        coordenadas.longitude,
+        coordenadas.latitude,
+        coordenadas.speed,
+        )
+        longitud.textContent = coordenadas.longitude;
+        latitud.textContent = coordenadas.latitude;
+        velocidad.textContent = coordenadas.speed;
+
+
+}
+geolocalizacion.getCurrentPosition(position);

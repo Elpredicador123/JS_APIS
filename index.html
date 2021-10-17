@@ -174,6 +174,51 @@
               </div>
             </div>
           </div>
+          <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">Geolocalizacion</h4>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Metodos:</strong></p>
+                <p class="card-text col-4">
+                  1.getCurrentPosition()
+                <br>
+                parametros:
+                <br>
+                position, error, options
+                <br>
+                propiedades de options:
+                <br>
+                enableHightAccuracy, timeout, maximumAge
+                </p>
+                <p class="card-text col-4">2.watchPosition()</p>
+              </div>
+              <div class="card-body row">
+                <p class="card-text col-12"><strong>Resultado:</strong></p>
+                <p>Longitud: <span id="longitud"></span> </p>
+                <p>Latitud: <span id="latitud"></span></p>
+                <p>Velocidad: <span id="velocidad"></span></p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-1 border border-dark card">
+              <div class="card-body">
+                <h4 class="card-title">Posicion</h4>
+              </div>
+              <div class="bg-dark rounded text-light p-4 row col-12 mx-auto">
+                <div class="h3 col-12" id="idioma">¿En que idioma quieres visualizar la pagina?</div>
+                <div class="col-6">
+                    <button type="button" name="" id="es" class="btn btn-primary btn-sm btn-block">Español</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" name="" id="en" class="btn btn-primary btn-sm btn-block">Ingles</button>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
 
