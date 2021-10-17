@@ -132,20 +132,20 @@ zona_textura.addEventListener("drop",(e)=>{
 const longitud = document.getElementById("longitud");
 const latitud = document.getElementById("latitud");
 const velocidad = document.getElementById("velocidad");
+const error = document.getElementById("error");
 
 const geolocalizacion = navigator.geolocation;
 const position = (pos)=>{ 
-    let coordenadas = pos.coords
-    console.log(
-        pos,
-        coordenadas.longitude,
-        coordenadas.latitude,
-        coordenadas.speed,
-        )
-        longitud.textContent = coordenadas.longitude;
-        latitud.textContent = coordenadas.latitude;
-        velocidad.textContent = coordenadas.speed;
-
-
+    let coordenadas = pos.coords;
+    longitud.textContent = coordenadas.longitude;
+    latitud.textContent = coordenadas.latitude;
+    velocidad.textContent = coordenadas.speed;
 }
-geolocalizacion.getCurrentPosition(position);
+const err = (e)=>{error.textContent = e}
+const options = {
+    maximumAge: 0, //cada cuanto se actualiza la informacion
+    timeout: 1000, //en cuanto nos devuelve la informacion
+    enableHightAccuracy:true, //usar todos los recursos para buscar
+}
+
+geolocalizacion.getCurrentPosition(position,err,options);
